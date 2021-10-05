@@ -10,11 +10,11 @@ public class C04_VerifyURLTest {
 //    Sayfa URL’inin www. techproeducation.com oldugunu dogrulayin
 
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver","C:/Users/90534/OneDrive/Belgeler/Selenium Dependencies/drivers/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:/Users/90534/OneDrive/Belgeler/Selenium Dependencies/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.techproeducation.com");
 
-        String actualURL= driver.getCurrentUrl();
+        String actualURL = driver.getCurrentUrl();
         String expectedURL = "www.techproeducation.com";
 
         if (actualURL.equals(expectedURL)) {
