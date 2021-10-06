@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class C03_Locators {
 
 //    1. Bir class oluşturun: LocatorsIntro
@@ -66,6 +69,12 @@ public class C03_Locators {
 
         System.out.println(addressbutton.isEnabled());
         System.out.println(singbutton.isEnabled());
+
+
+        List <WebElement> linkAdet = driver.findElements(By.tagName("a"));
+        System.out.println(linkAdet.size());
+
+        linkAdet.stream().forEach(t-> System.out.println(t.getText()));
 
         driver.close();
 
